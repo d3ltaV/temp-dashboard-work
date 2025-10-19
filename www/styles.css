@@ -1,222 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap");
 
 /* ==================== GLOBAL STYLES ==================== */
 body {
-  background-color: #FCFCFC;
-  color: #2c2c2c;
-  font-family: 'Roboto', sans-serif;
+  background-color: #fcfcfc;
+  color: #000000;
+  font-family: "Roboto";
 }
 
 /* ==================== NAVIGATION BAR ==================== */
 .navbar {
-  height: 12vh;
-  background-color: #e4e4e4 !important;
+  height: 11vh;
+  background-color: #dedfe0 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  border: none !important;
-  
+
   .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0vh;
+    padding-right: 0vh;
   }
   .navbar-brand {
     display: flex;
     align-items: center;
     margin: 0 !important;
     justify-content: center;
-    color: #FCFCFC !important;
-    background-color: #2c2c2c !important;
+    color: #fcfcfc !important;
+    background-color: #46638c !important;
     font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 12vh;
-    padding: 0rem 1rem;
+    font-size: 3vh;
+    line-height: 11vh;
+    padding: 0vh 3vw;
   }
 
   .navbar-nav {
     display: flex;
     align-items: center;
-    padding-left: 3rem;
+    padding-left: 3vw;
 
     .nav-item {
       display: flex;
       align-items: center;
+      padding: 0 0.8vw;
       color: #2c2c2c !important;
     }
 
     .nav-link {
       display: flex;
       align-items: center;
-      padding: 0 0.7rem !important;
       color: #2c2c2c !important;
+      padding: 0 0.6vw !important;
       font-weight: 500;
       transition: color 0.2s ease;
-      font-size: 1.1rem;
+      font-size: 2vh !important;
 
       &:hover {
         color: #003399 !important;
       }
 
       &.active {
-        color: #003399 !important;
+        color: #093182 !important;
       }
     }
   }
 }
 
-
 /* ==================== HERO / OVERVIEW ==================== */
 .intro {
-  padding: 2rem;
-  text-align: center;
+  padding: 5vh 8vw;
 
   .o-title {
-    font-size: 2.25rem;
+    font-size: 5vh;
     font-weight: 600;
-    color: #2c2c2c;
+    color: #2c2c2c !important;
     margin-bottom: 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter";
   }
 
   .o-sub {
-    font-size: 1.25rem;
-    font-family: 'Inter', sans-serif;
-    color: #003399;
+    font-size: 2.7vh;
+    font-family: "Inter";
+    color: #093182;
     font-weight: 530;
-    margin-bottom: 20px;
+    margin-bottom: 4vh;
   }
 
   .o-para {
-    font-size: 1.05rem;
-    color: #2c2c2c;
+    font-size: 2vh;
+    font-weight: 400 !important;
     line-height: 1.7;
     max-width: 70vw;
-    margin: 0 auto;
+    padding-left: 5vw;
   }
 }
 
 /* ==================== ABOUT / METHODS / USAGE CARDS ==================== */
 .info-cards-row {
-  width: 80rem;
-
+  width: 88vw;
+  display: flex;
+  margin: 0 auto 10vh auto;
+  padding: 5vh 0vh;
+  justify-content: center;
+  box-shadow: none !important;
+  border-radius: 2px;
+  background-color: #dedfe0;
+  gap: 1.5vw;
+  
   .card {
+    margin: 1vw !important;
     background-color: #ffffff;
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-    margin-bottom: 20px;
+    width: 25vw;
+    margin: 0;
+    padding: 0;
+    border: none!important;
+    box-shadow: none!important;
+    border-radius: 0!important;
+    font-size: 2vh;
 
-    &:hover {
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      transform: translateY(-2px);
-    }
+    .card-header {
+      border-radius: 0!important;
+      background-color: #46638c;
+      padding: 2vh 1vw;
+      color: #fcfcfc;
+      font-weight: 450;
+      font-size: 2vh;
 
-    &.about {
-      .card-header {
-        background-color: #e3f2fd;
-        color: #1565c0;
-        border-bottom: 2px solid #89CFF0;
-        font-weight: 600;
-        font-size: 1.1rem;
-        padding: 1rem 1.25rem;
-        font-family: 'Merriweather', serif;
-
-        i {
-          color: #1565c0;
-          margin-right: 8px;
-        }
+      i {
+        color: #fcfcfc;
+        margin-right: 8px;
       }
+    }
+  }
 
-      .card-body {
-        padding: 1.5rem 1.25rem;
-        color: #444;
+  .card.about {
+    .card-body {
+      p {
+        padding: 1vh 1vw 0vh 1vw;
+        font-weight: 400;
         line-height: 1.6;
+      }
+      
+      hr {
+        padding: 0vh;
+        width: 20em;
+        align-self: center;
+        border-top: 3px solid #093182;
+        opacity: 80%;
+        margin: 0;
+      }
+      
+      h5 {
+        color: #2c2c2c;
+        margin: 0!important;
+        font-size: 2vh;
+        font-weight: 550;
+        margin: 0!important;
+        padding-left: 1vw;
+      }
 
-        p {
-          margin-bottom: 15px;
+      ul {
+        margin-top: 0 !important;
+        padding-left: 3vw;
+
+        li {
+          font-weight: 400;
+          margin-bottom: 0.5vh;
+        }
+      }
+    }
+  }
+
+  .card.methods {
+    .card-body {
+      dl {
+        padding: 1vh 1vw 0vh 1vw;
+        margin-bottom: 0;
+        dt {
+          font-weight: 450;
+          color: #000000;
+          margin-top: 10px;
+
+          &:first-child {
+            margin-top: 0;
+          }
         }
 
-        h5 {
-          font-size: 1.1rem;
-          font-weight: 600;
+        dd {
           color: #2c2c2c;
-          margin: 15px 0 10px;
-          font-family: 'Merriweather', serif;
-        }
-
-        ul {
-          padding-left: 20px;
-          margin-bottom: 0;
-
-          li {
-            margin-bottom: 8px;
-            color: #555;
-          }
+          font-weight: 400;
+          margin-bottom: 8px;
         }
       }
     }
+  }
 
-    &.methods {
-      .card-header {
-        background-color: #f1f8e9;
-        color: #558b2f;
-        font-weight: 600;
-        font-size: 1.1rem;
-        padding: 1rem 1.25rem;
-        font-family: 'Merriweather', serif;
+  .card.usage {
+    .card-body {
+      ul {
+        padding: 1vh 1vw 0vh 2vw;
+        li {
+          margin-bottom: 0.5vh;
+          color: #2c2c2c;
 
-        i {
-          color: #558b2f;
-          margin-right: 8px;
-        }
-      }
-
-      .card-body {
-        dl {
-          dt {
-            font-weight: 600;
+          strong {
             color: #2c2c2c;
-            margin-top: 10px;
-          }
-
-          dd {
-            color: #666;
-            margin-bottom: 8px;
-            margin-left: 0;
-            padding-left: 20px;
-          }
-        }
-      }
-    }
-
-    &.usage {
-      .card-header {
-        background-color: #fff3e0;
-        color: #e65100;
-        border-bottom: 2px solid #ff9800;
-        font-weight: 600;
-        font-size: 1.1rem;
-        padding: 1rem 1.25rem;
-        font-family: 'Merriweather', serif;
-
-        i {
-          color: #e65100;
-          margin-right: 8px;
-        }
-      }
-
-      .card-body {
-        ol {
-          padding-left: 20px;
-          margin-bottom: 0;
-
-          li {
-            margin-bottom: 10px;
-            color: #555;
-
-            strong {
-              color: #2c2c2c;
-            }
+            font-weight: 550;
           }
         }
       }

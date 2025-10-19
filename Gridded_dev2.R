@@ -55,7 +55,7 @@ combined_data$lat <- combined_data$lat - 90
 
 # Define UI
 ui <- navbarPage(
-  title = "Temperature Dashboard",
+  title = "Temperature Monitoring",
   theme = bs_theme(
     version = 5,                 
     bootswatch = NULL,        
@@ -83,67 +83,57 @@ ui <- navbarPage(
            
            #info
            fluidRow(
+             class="info-cards-row",
              card(
-               class = "info-cards-row",
+               class = "about",
+               card_header(icon("globe"), "About This Dashboard"),
                card_body(
-                 column(width = 4, class="about-col",
-                        card(
-                          class = "about",
-                          card_header(icon("globe"), "About This Dashboard"),
-                          card_body(
-                            p("This interactive dashboard enables exploration of global surface temperature changes using high-resolution gridded data from Berkeley Earth."),
-                            hr(),
-                            h5("Key Features:"),
-                            tags$ul(
-                              tags$li("Interactive map-based exploration"),
-                              tags$li("Changepoint detection analysis"),
-                              tags$li("Location-specific time series"),
-                              tags$li("Hemisphere and global averages"),
-                              tags$li("Downloadable data and visualizations")
-                            )
-                          )
-                        )
-                 ),
-                 column(width = 4, class="methods-col",
-                        card(
-                          class = "methods",
-                          card_header(icon("chart-line"), "Methodology"),
-                          card_body(
-                            tags$dl(
-                              tags$dt("Data Source:"),
-                              tags$dd("Berkeley Earth Surface Temperature"),
-                              tags$dt("Time Period:"),
-                              tags$dd("1850-2023 (174 years)"),
-                              tags$dt("Spatial Resolution:"),
-                              tags$dd("1° × 1° global grid (64,800 cells)"),
-                              tags$dt("Analysis Method:"),
-                              tags$dd("Changepoint detection models identify shifts in temperature trends at each location"),
-                              tags$dt("Metric:"),
-                              tags$dd("Temperature anomalies (°C deviation from baseline)")
-                            )
-                          )
-                        )
-                 ),
-                 column(width = 4, class="usage-col",
-                        card(
-                          class = "usage",
-                          card_header(icon("question-circle"), "User Guide"),
-                          card_body(
-                            tags$ol(
-                              tags$li("Navigate to the ", tags$strong("Maps"), " tab"),
-                              tags$li("Click any location on the map or use the search bar"),
-                              tags$li("View temperature time series with fitted trends"),
-                              tags$li("Explore changepoint locations and warming rates"),
-                              tags$li("Download data for selected locations"),
-                              tags$li("Compare regional and global trends")
-                            )
-                          )
-                        )
-                 ),
+                 p("This interactive dashboard enables exploration of global surface temperature changes using high-resolution gridded data from Berkeley Earth."),
+                 hr(),
+                 h5("Key Features:"),
+                 tags$ul(
+                   tags$li("Interactive map-based exploration"),
+                   tags$li("Changepoint detection analysis"),
+                   tags$li("Location-specific time series"),
+                   tags$li("Hemisphere and global averages"),
+                   tags$li("Downloadable data and visualizations")
+                 )
+               )
+             ),
+             card(
+               class = "methods",
+               card_header(icon("chart-line"), "Methodology"),
+               card_body(
+                 tags$dl(
+                   tags$dt("Data Source:"),
+                   tags$dd("Berkeley Earth Surface Temperature"),
+                   tags$dt("Time Period:"),
+                   tags$dd("1850-2023 (174 years)"),
+                   tags$dt("Spatial Resolution:"),
+                   tags$dd("1° × 1° global grid (64,800 cells)"),
+                   tags$dt("Analysis Method:"),
+                   tags$dd("Changepoint detection models identify shifts in temperature trends at each location"),
+                   tags$dt("Metric:"),
+                   tags$dd("Temperature anomalies (°C deviation from baseline)")
+                 )
+               )
+             ),
+             card(
+               class = "usage",
+               card_header(icon("question-circle"), "User Guide"),
+               card_body(
+                 tags$ul(
+                   tags$li("Navigate to the ", tags$strong("Maps"), " tab"),
+                   tags$li("Click any location on the map or use the search bar"),
+                   tags$li("View temperature time series with fitted trends"),
+                   tags$li("Explore changepoint locations and warming rates"),
+                   tags$li("Download data for selected locations"),
+                   tags$li("Compare regional and global trends")
+                 )
                )
              )
            )
-  ),
+        ),
   
   tabPanel("Maps", 
            fluidRow(
