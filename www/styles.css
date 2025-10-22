@@ -212,3 +212,217 @@ body {
     }
   }
 }
+
+
+/* ==================== MAPS PAGE LAYOUT ==================== */
+.map-col,
+.time-col {
+  padding: 1vw;
+}
+
+/* ==================== MAP CARD STYLING ==================== */
+.map-card {
+  background-color: #dedfe0;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 2px !important;
+  margin-bottom: 2vh;
+
+  .card-header {
+    background-color: #46638c !important;
+    color: #fcfcfc !important;
+    font-weight: 500;
+    font-size: 2vh;
+    padding: 2vh 1vw;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .card-body {
+    background-color: #dedfe0;
+    padding: 1.5vw;
+
+    .map-body {
+      background-color: #ffffff;
+      padding: 0;
+      border-radius: 0;
+
+      .nav-tabs {
+        border-bottom: 2px solid #dedfe0;
+        background-color: #ffffff;
+      }
+
+      .nav-link {
+        color: #2c2c2c !important;
+        font-weight: 450;
+        font-size: 1.8vh;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 1.5vh 2vw;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #003399 !important;
+          background-color: #f0f0f0;
+        }
+
+        &.active {
+          color: #093182 !important;
+          background-color: #ffffff;
+          border-bottom: 3px solid #093182 !important;
+          font-weight: 550;
+        }
+      }
+
+      .tab-content {
+        background-color: #ffffff;
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* ==================== TIME SERIES CARD STYLING ==================== */
+.time-card {
+  background-color: #dedfe0;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 2px !important;
+
+  .time-header {
+    background-color: #46638c !important;
+    color: #fcfcfc !important;
+    font-weight: 500;
+    font-size: 2vh;
+    padding: 2vh 1vw;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .time-body {
+    background-color: #dedfe0;
+    padding: 1.5vw;
+
+    .card-body {
+      background-color: #ffffff;
+      padding: 2vh 1.5vw;
+      border-radius: 0;
+    }
+  }
+}
+
+/* ==================== NAVIGATION PILLS (TABS) ===================== */
+.timeseries_tabs {
+  .nav-pills {
+    background-color: #f5f5f5;
+    padding: 1vh 1vw;
+    border-radius: 0;
+    gap: 0.5vw;
+    margin-bottom: 2vh;
+
+    .nav-link {
+      color: #2c2c2c !important;
+      font-weight: 450;
+      font-size: 1.8vh;
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 1.2vh 1.5vw;
+      transition: all 0.2s ease;
+      background-color: #ffffff;
+
+      &:hover {
+        color: #003399 !important;
+        background-color: #e8e8e8;
+      }
+
+      &.active {
+        color: #fcfcfc !important;
+        background-color: #46638c !important;
+        font-weight: 550;
+      }
+    }
+  }
+}
+
+/* ==================== GRAPH CONTAINERS ==================== */
+.selected-graph,
+.north-graph,
+.south-graph,
+.global-graph {
+  padding: 1vh 0;
+
+  hr {
+    border-top: 2px solid #dedfe0;
+    margin: 2vh 0;
+    opacity: 0.6;
+  }
+}
+
+/* ==================== MODEL SUMMARY TEXT ==================== */
+#model_summary_text {
+  background-color: #f8f9fa;
+  border-left: 3px solid #093182;
+  padding: 1.5vh 1vw;
+  margin-top: 1vh;
+  font-size: 1.8vh;
+  font-weight: 450;
+  color: #2c2c2c;
+  font-family: "Inter", sans-serif;
+  border-radius: 0;
+}
+
+/* ==================== LEAFLET MAP ADJUSTMENTS ==================== */
+.leaflet-container {
+  background-color: #f8f9fa;
+  border-radius: 0;
+}
+
+/* ==================== RESPONSIVE ADJUSTMENTS ==================== */
+@media (max-width: 992px) {
+  .map-col,
+  .time-col {
+    padding: 2vw;
+  }
+
+  .info-cards-row {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+}
+
+/* ==================== BUTTON STYLING (if needed) ==================== */
+.btn-outline-secondary {
+  color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+  font-size: 1.8vh;
+  font-weight: 450;
+  border-radius: 0 !important;
+  padding: 0.8vh 1.5vw;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #2c2c2c !important;
+    color: #fcfcfc !important;
+  }
+}
+
+/* ==================== PLOTLY MODEBAR ADJUSTMENTS ==================== */
+.js-plotly-plot {
+  .plotly {
+    .modebar {
+      background-color: transparent !important;
+    }
+
+    .modebar-btn {
+      color: #2c2c2c !important;
+
+      &:hover {
+        background-color: #dedfe0 !important;
+      }
+    }
+  }
+}
